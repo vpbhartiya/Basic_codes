@@ -1,0 +1,61 @@
+//Print count of intergers repeated  in given array. if not then display -1
+#include<bits/stdc++.h>
+using namespace std;
+
+const int N = 10;	// 0 to 9 index
+int hsh[N] ;
+int main()
+{
+/*	int a[10] = {5, 7, 8, 3, 7, 8, 9, 2, 3};
+	int ctr = 0;
+	
+	for(int i =0; i < 10; i++)
+	{
+		int x = a[i];		// x is index of hash array
+
+		hsh[x]++;
+	}
+
+	//for(int i =0; i < N; i++)
+		//cout << hsh[i] << endl;
+
+	for(int i =0; i < N; i++)
+	{
+		if(hsh[i] > 1)
+		{
+			ctr++;
+		}		
+	}
+	if(ctr > 0)
+		cout << ctr;
+	else
+		cout << -1;			*/
+
+	//Alternatively:-
+
+	long long int n;
+	cin >> n;
+
+	int ctr = 0;
+
+	while(n > 0)
+	{
+		hsh[n%10]++;
+		n = n/10;
+	}
+
+	for(int i =0; i < N; i++)
+	{
+		if(hsh[i] > 1)
+		{
+			ctr++;
+		}		
+	}
+	if(ctr > 0)
+		cout << ctr;
+	else
+		cout << -1;		
+}
+
+
+
