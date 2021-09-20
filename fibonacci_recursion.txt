@@ -1,0 +1,28 @@
+//Print entire series using recursion.
+#include<bits/stdc++.h>
+using namespace std;
+
+void fib_rec(int num)
+{
+	static int a = 0, b = 1, c;
+	
+	if(num > 0)
+	{
+		c = a + b;
+		a = b;
+		b = c;
+		cout << c << " ";
+		fib_rec(num - 1);
+	}		
+}
+
+
+int main()
+{
+	int n;
+	cout << "Enter number \n";
+	cin >> n;
+	cout << "0 " << "1 ";
+	fib_rec(n - 2);
+	return 0;
+}

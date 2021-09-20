@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int fac(int num)
+{	
+	int f = 1;
+	if(num<=1)
+		return 1;
+	
+	for(int i=2; i<=num; i++)
+		f = f * i;
+	
+	return f;
+}
+
+int main()
+{
+	int factorial, n;
+	cout << "Enter the no.: " << endl;
+	cin >> n;
+
+	factorial = fac(n);
+	cout << factorial;
+
+	
+}

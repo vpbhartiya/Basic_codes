@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int fac(int num)
+{
+	if(num<=1)
+		return 1;
+	else
+		return num * fac(num-1);
+	
+}
+
+int main()
+{
+	int f, n;
+	cout << "Enter the no.: " << endl;
+	cin >> n;
+
+	f = fac(n);
+	cout << f;
+
+	
+}
